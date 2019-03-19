@@ -3,7 +3,7 @@ templateKey: index-page
 title: Ngomez Engineering website
 image: /img/home-jumbotron.jpg
 heading: Welcome to the Gomez engineering cloud Plateform.
-subheading: Support sustainable farming while enjoying a cup
+subheading: Our Services
 mainpitch:
   title: Why Kaldi
   description: >
