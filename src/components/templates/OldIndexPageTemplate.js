@@ -2,9 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 export const IndexPageTemplate = ({
     image,
-    title,
-    heading,
-    subheading,
+    title
   }) => (
     <div>
       <div
