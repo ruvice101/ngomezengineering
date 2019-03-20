@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+import { Helmet } from 'react-helmet'
 
 export const AboutPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content
@@ -36,6 +37,11 @@ const AboutPage = ({ data }) => {
 
   return (
     <Layout>
+      <Helmet>
+          <meta charSet="utf-8" />
+          <title>A propos de nous</title>
+          <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <AboutPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}

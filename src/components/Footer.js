@@ -13,8 +13,8 @@ const Footer = class extends React.Component {
         <div className="content has-text-centered">
           <img
             src={logo}
-            alt="Kaldi"
-            style={{ width: '14em', height: '10em' }}
+            alt="Ngomez Engineering Logo"
+            style={{ width: '14em', height: "auto" }}
           />
         </div>
         <div className="content has-text-centered has-background-black has-text-white-ter">
@@ -31,6 +31,11 @@ const Footer = class extends React.Component {
                     <li>
                       <Link className="navbar-item" to="/about">
                         Mission
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="navbar-item" to="/products">
+                        Métiers
                       </Link>
                     </li>
                     <li>
@@ -56,7 +61,7 @@ const Footer = class extends React.Component {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        Admin
+                        Espace Administrateur
                       </a>
                     </li>
                   </ul>
@@ -66,23 +71,23 @@ const Footer = class extends React.Component {
                 <section>
                   <ul className="menu-list">
                     <li>
-                      <Link className="navbar-item" to="#">
+                      <Link className="navbar-item" to="/products">
                         Métiers
                       </Link>
                     </li>
                     <li>
-                      <Link className="navbar-item" to="#">
-                        1
+                      <Link className="navbar-item" to="/products/geomatique">
+                        Ingénierie Geomatique
                       </Link>
                     </li>
                     <li>
-                      <Link className="navbar-item" to="#">
-                        2
+                      <Link className="navbar-item" to="/produts/btp">
+                        Activités du BTP
                       </Link>
                     </li>
                     <li>
-                      <Link className="navbar-item" to="#">
-                        3
+                      <Link className="navbar-item" to="/products/geomètre-expert">
+                        Geomètre - Expert
                       </Link>
                     </li>
                   </ul>
