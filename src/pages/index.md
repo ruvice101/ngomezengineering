@@ -4,7 +4,7 @@ title: Ngomez Engineering website
 image: /img/home-jumbotron.jpg
 heading: Welcome to the Gomez engineering cloud Plateform.
 subheading: Our Services
-mainpitch:
+mainpitch: 
   title: Why Kaldi
   description: >
     Kaldi is the coffee store for everyone who believes that great coffee
