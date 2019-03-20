@@ -5,12 +5,13 @@ image: /img/home-jumbotron.jpg
 heading: Welcome to the Gomez engineering cloud Plateform.
 subheading: Our Services
 mainpitch: 
-  title: Why Kaldi
+  title: Présentation
   description: >
-    Kaldi is the coffee store for everyone who believes that great coffee
-    shouldn't just taste good, it should do good too. We source all of our beans
-    directly from small scale sustainable farmers and make sure part of the
-    profits are reinvested in their communities.
+    Crée en 2013, Notre cabinet d’ingénierie Géomatique et de Géomètres-Experts NGOMEZ ENGINEERING situé dans l’arrondissement de Yaoundé 1 er , lieu-dit ELIG-ESSONO, entre le siège
+    de l’ONIGC et le supermarché MAHIMA intervient sur tous vos projets de construction ou de
+    réhabilitation. Particuliers, professionnels ou collectivités, nous assurons toutes sortes de
+    prestations liées à l’ingénierie Géomatique, aux activités du Géomètre-Expert , aux activités
+    du BTP et aux formations à la carte.
 description: >-
   Kaldi is the ultimate spot for coffee lovers who want to learn about their
   java’s origin and support the farmers that grew it. We take coffee production,
