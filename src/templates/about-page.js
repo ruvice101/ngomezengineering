@@ -40,7 +40,7 @@ const AboutPage = ({ data }) => {
       <Helmet>
           <meta charSet="utf-8" />
           <title>A propos de nous</title>
-          <link rel="canonical" href="http://mysite.com/example" />
+          {/* <link rel="canonical" href="http://mysite.com/example" /> */}
       </Helmet>
       <AboutPageTemplate
         contentComponent={HTMLContent}

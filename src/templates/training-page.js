@@ -40,7 +40,7 @@ const TrainingPage = ({ data }) => {
       <Helmet>
           <meta charSet="utf-8" />
           <title>Formations - Ngomez Engineering</title>
-          <link rel="canonical" href="http://mysite.com/example" />
+          {/* <link rel="canonical" href="http://mysite.com/example" /> */}
       </Helmet>
       <TrainingPageTemplate
         contentComponent={HTMLContent}
