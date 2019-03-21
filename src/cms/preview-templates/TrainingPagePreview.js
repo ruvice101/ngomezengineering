@@ -2,22 +2,22 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { TrainingPageTemplate } from '../../templates/training-page';
 
-const TrainingPagePreview = ({ entry, widgetFor }) => (
-  <TrainingPageTemplate
-    image={entry.getIn(['data', 'image'])}
-    title={entry.getIn(['data', 'title'])}
-    content={widgetFor('body')}
-
-  // heading={entry.getIn(['data', 'heading'])}
-  // tags={entry.getIn(['data', 'tags'])}
-  />
-)
+const TrainingPagePreview = ({ entry }) => {
+  return (
+    <TrainingPageTemplate
+      image={entry.getIn(['data', 'image'])}
+      title={entry.getIn(['data', 'title'])}
+      heading={entry.getIn(['data', 'heading'])}
+      description={entry.getIn(['data', 'description'])}
+    />
+  )
+}
 
 TrainingPagePreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func,
   }),
-  widgetFor: PropTypes.func,
+  getAsset: PropTypes.func,
 }
 
 export default TrainingPagePreview

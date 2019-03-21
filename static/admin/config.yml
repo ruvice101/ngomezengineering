@@ -8,6 +8,11 @@ site_url: https://ngomezgroup.com
 display_url: https://ngomezgroup.com
 logo_url: https://yneka.ml/assets/images/yneka-logo-white.png
 
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "-"
+
 collections:
   - name: "pages"
     label: "Pages"
@@ -52,7 +57,7 @@ collections:
     label: "Métiers"
     folder: "src/pages/metiers"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{slug}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "product-detail"}
       - {label: "Title", name: "title", widget: "string"}
