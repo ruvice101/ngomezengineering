@@ -64,7 +64,7 @@ export default class Index extends React.Component {
                 </div>
                 <div className="field">
                   <label className="label" htmlFor={'name'}>
-                    Your name
+                    Noms et Prénoms
                   </label>
                   <div className="control">
                     <input
@@ -73,6 +73,36 @@ export default class Index extends React.Component {
                       name={'name'}
                       onChange={this.handleChange}
                       id={'name'}
+                      required={true}
+                    />
+                  </div>
+                </div>
+                <div className="field">
+                  <label className="label" htmlFor={'phoneNumber'}>
+                    Numéro de téléphone
+                  </label>
+                  <div className="control">
+                    <input
+                      className="input"
+                      type={'text'}
+                      name={'phoneNumber'}
+                      onChange={this.handleChange}
+                      id={'phone-number'}
+                      required={true}
+                    />
+                  </div>
+                </div>
+                <div className="field">
+                  <label className="label" htmlFor={'subject'}>
+                    Sujet
+                  </label>
+                  <div className="control">
+                    <input
+                      className="input"
+                      type={'text'}
+                      name={'subject'}
+                      onChange={this.handleChange}
+                      id={'subject'}
                       required={true}
                     />
                   </div>
@@ -108,7 +138,7 @@ export default class Index extends React.Component {
                 </div>
                 <div className="field">
                   <button className="button is-link" type="submit">
-                    Send
+                    Envoyé
                   </button>
                 </div>
               </form>
