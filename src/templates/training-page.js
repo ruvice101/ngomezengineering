@@ -71,7 +71,7 @@ TrainingPage.propTypes = {
 export default TrainingPage
 
 export const TrainingPageQuery = graphql`
-  query TrainingPage($id: String!) {
+  query TrainingPageByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {

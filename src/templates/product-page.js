@@ -79,8 +79,10 @@ ProductPage.propTypes = {
 export default ProductPage
 
 export const productPageQuery = graphql`
-  query ProductPage($id: String!) {
+  query ProductPageByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
+      id
+      html
       frontmatter {
         title
         image {
