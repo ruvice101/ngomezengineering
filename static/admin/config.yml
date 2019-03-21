@@ -75,9 +75,6 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Mots clés", name: "keywords", widget: "list"}
-  
-
-        
 
   # - name: "pages"
   #   label: "Pages"
