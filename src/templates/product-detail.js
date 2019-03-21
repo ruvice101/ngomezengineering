@@ -88,7 +88,7 @@ ProductDetail.propTypes = {
 export default ProductDetail
 
 export const pageQuery = graphql`
-  query BProductDetailByID($id: String!) {
+  query ProductDetailByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id
       html
