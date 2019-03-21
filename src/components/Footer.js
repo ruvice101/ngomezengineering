@@ -29,20 +29,17 @@ const Footer = class extends React.Component {
                       </Link>
                     </li>
                     <li>
-                      <Link className="navbar-item" to="/about">
+                      <Link className="navbar-item" to="/mission">
                         Mission
                       </Link>
                     </li>
                     <li>
-                      <Link className="navbar-item" to="/products">
+                      <Link className="navbar-item" to="/metiers">
                         Métiers
                       </Link>
                     </li>
                     <li>
-                      {/* <Link className="navbar-item" to="/products">
-                        Products
-                      </Link> */}
-                      <Link className="navbar-item" to="/training">
+                      <Link className="navbar-item" to="/formations">
                         Formations
                       </Link>
                     </li>
@@ -71,22 +68,22 @@ const Footer = class extends React.Component {
                 <section>
                   <ul className="menu-list">
                     <li>
-                      <Link className="navbar-item" to="/products">
+                      <Link className="navbar-item" to="/metiers">
                         Métiers
                       </Link>
                     </li>
                     <li>
-                      <Link className="navbar-item" to="/products/geomatique">
+                      <Link className="navbar-item" to="/metiers/geomatique">
                         Ingénierie Geomatique
                       </Link>
                     </li>
                     <li>
-                      <Link className="navbar-item" to="/produts/btp">
+                      <Link className="navbar-item" to="/metiers/batiments-travaux-publics">
                         Activités du BTP
                       </Link>
                     </li>
                     <li>
-                      <Link className="navbar-item" to="/products/geomètre-expert">
+                      <Link className="navbar-item" to="/metiers/geometre-expert">
                         Geomètre - Expert
                       </Link>
                     </li>

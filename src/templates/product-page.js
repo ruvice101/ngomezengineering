@@ -70,7 +70,7 @@ const ProductPage = ({ data }) => {
       <Helmet>
           <meta charSet="utf-8" />
           <title>Métier</title>
-          {/* <link rel="canonical" href="http://mysite.com/example" /> */}
+          {/* <link rel="canonical" href="http://ngomezengineering.com/metiers" /> */}
       </Helmet>
       <ProductPageTemplate
         image={frontmatter.image}
