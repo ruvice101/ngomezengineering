@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
 import Layout from '../components/Layout'
-import Banner from '../components/Banner';
+// import Banner from '../components/Banner';
 
 export const ProductPageTemplate = ({
   image,
@@ -16,7 +16,7 @@ export const ProductPageTemplate = ({
 
         <div className="columns">
           <div className="column">
-            <Banner image={image} title={title} />
+            {/* <Banner image={image} title={title} /> */}
           </div>
         </div>
 
@@ -50,7 +50,7 @@ ProductPageTemplate.propTypes = {
 
 const ProductPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
-
+  console.log(frontmatter)
   return (
     <Layout>
       <Helmet>
@@ -79,10 +79,8 @@ ProductPage.propTypes = {
 export default ProductPage
 
 export const productPageQuery = graphql`
-  query ProductPageByID($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-      id
-      html
+  query ProductPageTemplate {
+    markdownRemark(frontmatter: { templateKey: { eq: "product-page" } }) {
       frontmatter {
         title
         image {
@@ -94,8 +92,8 @@ export const productPageQuery = graphql`
         }
         heading
         description
-        
       }
     }
   }
+
 `

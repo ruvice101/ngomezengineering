@@ -4,7 +4,7 @@ path: /formations
 title: Nos Formations, Gomez Engineering
 image: /img/jumbotron.jpg
 heading: Formations
----
+--- 
 ### Topographie
 Appareils de topographie: GNSS, TPS, LS...
 

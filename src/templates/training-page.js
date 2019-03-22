@@ -4,7 +4,7 @@ import { graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
-import Banner from '../components/Banner';
+// import Banner from '../components/Banner';
 
 export const TrainingPageTemplate = ({
   title,
@@ -20,7 +20,7 @@ export const TrainingPageTemplate = ({
 
         <div className="columns">
           <div className="column">
-            <Banner image={image} title={title} />
+            {/* <Banner image={image} title={title} /> */}
           </div>
         </div>
 
