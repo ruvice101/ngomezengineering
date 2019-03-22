@@ -7,7 +7,6 @@ const FormationPagePreview = ({ entry, widgetFor }) => {
     <FormationPageTemplate
       image={entry.getIn(['data', 'image'])}
       title={entry.getIn(['data', 'title'])}
-      heading={entry.getIn(['data', 'heading'])}
       content={widgetFor('body')}
     />
   )
