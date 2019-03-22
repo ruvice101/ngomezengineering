@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
 import Layout from '../components/Layout'
-// import Banner from '../components/Banner';
+import Banner from '../components/Banner';
 
 export const ProductPageTemplate = ({
   image,
@@ -16,7 +16,7 @@ export const ProductPageTemplate = ({
 
         <div className="columns">
           <div className="column">
-            {/* <Banner image={image} title={title} /> */}
+            <Banner image={image} title={title} />
           </div>
         </div>
 
@@ -83,7 +83,13 @@ export const productPageQuery = graphql`
     markdownRemark(frontmatter: { templateKey: { eq: "product-page" } }) {
       frontmatter {
         title
-        image
+        image {
+          childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         heading
         description
       }

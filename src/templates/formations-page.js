@@ -1,11 +1,3 @@
-// image {
-//   childImageSharp {
-//     fluid(maxWidth: 2048, quality: 100) {
-//       ...GatsbyImageSharpFluid
-//     }
-//   }
-// }
-
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
@@ -71,7 +63,13 @@ export const FormationPageQuery = graphql`
       html
       frontmatter {
         title
-        image
+        image {
+          childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         heading
         description
       }
