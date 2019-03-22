@@ -1,17 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { kebabCase } from 'lodash'
+// import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 
-export const TrainingDetailTemplate = ({
+export const FormationDetailTemplate = ({
   content,
   contentComponent,
-  description,
-  tags,
-  title,
+  keywords,
   helmet,
 }) => {
   const PostContent = contentComponent || Content
@@ -22,18 +20,15 @@ export const TrainingDetailTemplate = ({
       <div className="container content">
         <div className="columns">
           <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
-            </h1>
-            <p>{description}</p>
             <PostContent content={content} />
-            {tags && tags.length ? (
+            {keywords && keywords.length ? (
               <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
+                <h4>Mots clés:</h4>
                 <ul className="taglist">
-                  {tags.map(tag => (
-                    <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                  {keywords.map(keyword => (
+                    <li key={keyword + `tag`}>
+                      {keyword}
+                      {/* <Link to={`/keywords/${kebabCase(keyword)}/`}>{keyword}</Link> */}
                     </li>
                   ))}
                 </ul>
@@ -46,20 +41,21 @@ export const TrainingDetailTemplate = ({
   )
 }
 
-TrainingDetailTemplate.propTypes = {
+FormationDetailTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
   description: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
+  keywords: PropTypes.array,
 }
 
-const TrainingDetail = ({ data }) => {
+const FormationDetail = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
     <Layout>
-      <TrainingDetailTemplate
+      <FormationDetailTemplate
         content={post.html}
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
@@ -72,31 +68,30 @@ const TrainingDetail = ({ data }) => {
             />
           </Helmet>
         }
-        tags={post.frontmatter.tags}
+        keywords={post.frontmatter.keywords}
         title={post.frontmatter.title}
       />
     </Layout>
   )
 }
 
-TrainingDetail.propTypes = {
+FormationDetail.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.object,
   }),
 }
 
-export default TrainingDetail
+export default FormationDetail
 
 export const pageQuery = graphql`
-  query TrainingDetailByID($id: String!) {
+  query FormationDetailByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
         title
         description
-        tags
+        keywords
       }
     }
   }

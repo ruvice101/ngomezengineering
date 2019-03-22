@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { FormationPageTemplate } from '../../templates/formations-page';
 
-const FormationPagePreview = ({ entry }) => {
+const FormationPagePreview = ({ entry, widgetFor }) => {
   return (
     <FormationPageTemplate
       image={entry.getIn(['data', 'image'])}

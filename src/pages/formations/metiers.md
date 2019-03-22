@@ -1,13 +1,13 @@
 ---
 templateKey: formation-detail
 title: Metiers; Topographie, expert-geomètre
-date: 2017-01-04T15:04:10.000Z
 description: Details Formations
-tags:
+featureImage: ""
+keywords:
   - Formations
   - Métiers
   - Cameroun
 ---
 
-## Formations
+## Métiers, topograohie, expert-geomètre
 Détails de la formations; prix, durée etc...

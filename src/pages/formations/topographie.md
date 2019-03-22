@@ -1,13 +1,13 @@
 ---
 templateKey: formation-detail
 title: topographie
-date: 2017-01-04T15:04:10.000Z
 description: Details Formations
-tags:
+featureImage: ""
+keywords:
   - Formations
   - Topographie
   - Cameroun
 ---
 
-## Formations
+## Topographie
 Détails de la formations; prix, durée etc...
