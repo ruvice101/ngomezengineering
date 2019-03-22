@@ -55,14 +55,15 @@ collections:
           - {label: Description, name: description, widget: string}
 
   - name: "formation"
-    label: "Espaces Formation"
+    label: "Espaces Formations"
     folder: "src/pages/formations"
     create: true
+    slug: "{{slug}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "formation-detail"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Description", name: "description", widget: "text" }
-      - {label: "Feature Image", name: "featureImage", widget: "image" }
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Feature Image", name: "featureImage", widget: "image", required: false }
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Mots clés", name: "keywords", widget: "list"}
 
