@@ -6,7 +6,7 @@ import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 // import Banner from '../components/Banner';
 
-export const TrainingPageTemplate = ({
+export const FormationPageTemplate = ({
   title,
   content,
   contentComponent,
@@ -37,14 +37,14 @@ export const TrainingPageTemplate = ({
   )
 }
 
-TrainingPageTemplate.propTypes = {
+FormationPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
 }
 
-const TrainingPage = ({ data }) => {
+const FormationPage = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
@@ -54,7 +54,7 @@ const TrainingPage = ({ data }) => {
         <title>{post.frontmatter.title}</title>
         {/* <link rel="canonical" href="http://mysite.com/example" /> */}
       </Helmet>
-      <TrainingPageTemplate
+      <FormationPageTemplate
         title={post.frontmatter.heading}
         content={post.html}
         contentComponent={HTMLContent}
@@ -64,18 +64,19 @@ const TrainingPage = ({ data }) => {
   )
 }
 
-TrainingPage.propTypes = {
+FormationPage.propTypes = {
   data: PropTypes.object.isRequired,
 }
 
-export default TrainingPage
+export default FormationPage
 
-export const TrainingPageQuery = graphql`
-  query TrainingPageByID($id: String!) {
+export const FormationPageQuery = graphql`
+  query FormationPageByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
         title
+        heading
         image {
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {
@@ -83,7 +84,6 @@ export const TrainingPageQuery = graphql`
             }
           }
         }
-        heading
       }
     }
   }
