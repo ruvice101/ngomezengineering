@@ -53,6 +53,10 @@ const FormationPage = ({ data }) => {
         <meta charSet="utf-8" />
         <title>{post.frontmatter.title}</title>
         {/* <link rel="canonical" href="http://mysite.com/example" /> */}
+        <meta
+          name="description"
+          content={`${post.frontmatter.description}`}
+        />
       </Helmet>
       <FormationPageTemplate
         title={post.frontmatter.heading}
@@ -70,13 +74,12 @@ FormationPage.propTypes = {
 
 export default FormationPage
 
-export const FormationPageQuery = graphql`
-  query FormationPageByID($id: String!) {
-    markdownRemark(id: { eq: $id }) {
+export const pageQuery = graphql`
+  query FormationPageTemplate {
+    markdownRemark(frontmatter: { templateKey: { eq: "formations-page" } }) {
       html
       frontmatter {
         title
-        heading
         image {
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {
@@ -84,6 +87,8 @@ export const FormationPageQuery = graphql`
             }
           }
         }
+        heading
+        description
       }
     }
   }
