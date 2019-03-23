@@ -3,7 +3,7 @@ backend:
   branch: dev
   # name: github
   # repo: ruvice101/ngomezengineering
-  # name: test-repo
+  name: test-repo
 
 media_folder: static/img
 public_folder: /img
@@ -63,6 +63,7 @@ collections:
     folder: "src/pages/formations"
     create: true
     slug: "{{slug}}"
+    filter: {field: "templateKey", value: "formation-detail"}
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "formation-detail"}
       - {label: "Title", name: "title", widget: "string"}
