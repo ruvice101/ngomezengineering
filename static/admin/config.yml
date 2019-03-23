@@ -3,7 +3,7 @@ backend:
   branch: dev
   # name: github
   # repo: ruvice101/ngomezengineering
-  name: test-repo
+  #name: test-repo
 
 media_folder: static/img
 public_folder: /img
