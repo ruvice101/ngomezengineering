@@ -1,6 +1,8 @@
 backend:
-  name: git-gateway
-  branch: dev
+  name: github
+  rep: ruvice101/ngomezengineering
+  # name: git-gateway
+  # branch: dev
   # name: test-repo
 
 media_folder: static/img
@@ -8,6 +10,7 @@ public_folder: /img
 site_url: https://ngomezgroup.com
 display_url: https://ngomezgroup.com
 logo_url: https://yneka.ml/assets/images/yneka-logo-white.png
+publish_mode: editorial_workflow
 
 slug:
   encoding: "ascii"
