@@ -1,6 +1,6 @@
 backend:
   name: github
-  rep: ruvice101/ngomezengineering
+  repo: ruvice101/ngomezengineering
   branch: dev
   # name: git-gateway
   # name: test-repo
