@@ -65,6 +65,7 @@ CMS.registerEditorComponent({
   fromBlock: function(matchIn) {
     var match = matchIn[1].match(/(?:(\b\w+\b)\s*=\s*("[^"]*"|'[^']*'|[^"'<>\s]+)\s*)/g);
     let results = {};
+    let i = 0;
     for (i=0; i < match.length; i++) {
       const pair = match[i].match(/(\b\w+\b)\s*=\s*("[^"]*"|'[^']*'|[^"'<>\s]+)\s*/);
       results[pair[1]] = pair[2].replace(/['"]+/g,'');
