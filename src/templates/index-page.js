@@ -3,20 +3,34 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
-import OldIndexPageTemplate from '../components/templates/OldIndexPageTemplate'
+import { Quote } from '../components';
 
-export const IndexPageTemplate = OldIndexPageTemplate
+import './all.sass'
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
-
+  const { title, image, heading } = frontmatter
   return (
     <Layout>
-      <IndexPageTemplate
-        image={frontmatter.image}
-        title={frontmatter.title}
-        heading={frontmatter.heading}
-      />
+      <div className="is-fullwidth">
+        <header className="columns header"
+          style={{
+            backgroundImage: `url(${
+              !!image.childImageSharp ? image.childImageSharp.fluid.src : image
+              })`,
+          }}
+        >
+          <div className="column">
+            <h1 className=" is-text has-text-centered heading has-text-white">
+              {title || heading || "INGENIERIE GEOMATIQUES ET GEOMETRE EXPERTS"}
+            </h1>
+          </div>
+          <div className="column">
+            <Quote />
+          </div>
+        </header>
+      </div>
+
     </Layout>
   )
 }
