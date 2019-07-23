@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
-import { Quote, Metiers } from '../components';
+import { Quote, Metiers, Partenaires } from '../components';
 
-export const IndexPageTemplate = ({ title, image }) => (
+export const IndexPageTemplate = ({ title, image, partners }) => (
   <>
     <div className="is-fullwidth">
       <header className="columns header" style={{
@@ -28,6 +28,8 @@ export const IndexPageTemplate = ({ title, image }) => (
 
       <Metiers />
       
+      <Partenaires partners={partners} />
+
     </div>
 
 
@@ -43,6 +45,7 @@ const IndexPage = ({ data }) => {
         image={frontmatter.image}
         title={frontmatter.title}
         heading={frontmatter.heading}
+        {...frontmatter}
       />
     </Layout>
   )
@@ -69,6 +72,14 @@ export const pageQuery = graphql`
               ...GatsbyImageSharpFluid
             }
           }
+        }
+        metiers {
+          title
+          image
+        }
+        partners {
+          title
+          image
         }
       }
     }
