@@ -95,10 +95,18 @@ export const productPageQuery = graphql`
         }
         heading
         description
+        
         metiers {
           title
-          image
+          image {
+            childImageSharp {
+              fixed {
+                src
+              }
+            }
+          }
         }
+
       }
     }
   }

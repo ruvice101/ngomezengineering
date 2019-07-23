@@ -73,14 +73,31 @@ export const pageQuery = graphql`
             }
           }
         }
+        
+        
         metiers {
           title
-          image
+          image {
+            childImageSharp {
+              fixed {
+                src
+              }
+            }
+          }
         }
+        
         partners {
           title
-          image
+          image {
+            childImageSharp {
+              fixed {
+                src
+              }
+            }
+          }
         }
+
+
       }
     }
   }

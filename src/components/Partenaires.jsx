@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import './partenaires.sass'
 
 class Partenaires extends Component {
-  renderPartners = (partner, i) => partner.image ?
+  renderPartners = ({ image, title }, i) => image ?
     <div className="column is-one-fifth" style={{ height: 128, background: '#fff' }} key={i}>
       <img
-        title={partner.title}
+        title={title}
         style={styles.img}
-        alt={partner.title}
-        src={partner.image}
+        alt={title}
+        src={(image && !!image.childImageSharp) ? image.childImageSharp.fixed.src : image}
         className="image-bw-to-color wow rubberBand"
       />
     </div>

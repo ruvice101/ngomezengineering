@@ -3,18 +3,18 @@ import { Link } from 'gatsby'
 import "./metiers.sass"
 
 class Metiers extends Component {
-    renderMetiers = (metier, i) => (
+    renderMetiers = ({ image, title }, i) => (
         <div className="column is-one-third metier">
             <div className="content" style={{
-                backgroundImage: `url(${metier.image || "https://via.placeholder.com/320x360"})`
+                backgroundImage: `url(${((image && !!image.childImageSharp) ? image.childImageSharp.fixed.src : image) || "https://via.placeholder.com/320x360"})`
             }}>
                 <h4>
-                    {metier.title}
+                    {title}
                 </h4>
             </div>
         </div>
     )
-
+    
     render() {
         let { metiers, listAll, hideTitle } = this.props
         return (
