@@ -5,7 +5,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import { Quote, Metiers, Partenaires } from '../components';
 
-export const IndexPageTemplate = ({ title, image, partners }) => (
+export const IndexPageTemplate = ({ title, image, partners, metiers }) => (
   <>
     <div className="is-fullwidth">
       <header className="columns header" style={{
@@ -26,7 +26,7 @@ export const IndexPageTemplate = ({ title, image, partners }) => (
         </div>
       </header>
 
-      <Metiers />
+      <Metiers metiers={metiers} />
       
       <Partenaires partners={partners} />
 
