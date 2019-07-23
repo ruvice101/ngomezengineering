@@ -14,7 +14,7 @@ const Footer = class extends React.Component {
           <img
             src={logo}
             alt="Ngomez Engineering Logo"
-            style={{ width: '14em', height: "auto" }}
+            style={{ maxWidth: 360, height: "auto" }}
           />
         </div>
         <div className="content has-text-centered has-background-black has-text-white-ter">
@@ -25,7 +25,7 @@ const Footer = class extends React.Component {
                   <ul className="menu-list">
                     <li>
                       <Link to="/" className="navbar-item">
-                        Home
+                        Acceuil
                       </Link>
                     </li>
                     <li>
