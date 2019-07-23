@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'gatsby';
 
-import logo from '../img/logo.jpg';
+import logo from '../img/logo.png';
 
 import './navigation.sass';
 
