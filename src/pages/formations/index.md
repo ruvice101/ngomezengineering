@@ -2,7 +2,7 @@
 templateKey: 'training-page'
 path: /formations
 title: Nos Formations
-image: /img/jumbotron.jpg
+image: /img/bg.jpg
 ---
 ### Topographie
 Appareils de topographie: GNSS, TPS, LS...

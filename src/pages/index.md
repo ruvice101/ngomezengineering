@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 title: Ngomez Engineering, INGENIERIE GEOMATIQUES ET GEOMETRE EXPERTS
-image: /img/home-jumbotron.jpg
+image: /img/bg.jpg
 metiers:
   - title: Arpentage topographie
     image: /img/metiers/arpentage-topographie.jpg

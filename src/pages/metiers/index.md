@@ -2,7 +2,7 @@
 templateKey: 'product-page'
 path: /metiers
 title: Métiers
-image: /img/jumbotron.jpg
+image: /img/bg.jpg
 heading: Métiers Gomez - Engineering
 description: >-
   Ingénierie Geomatique,
