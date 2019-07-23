@@ -4,7 +4,7 @@ backend:
 
 media_folder: static/img
 public_folder: /img
-logo_url: https://yneka.ml/assets/images/yneka-logo-white.png
+logo_url: https://www.bogital.com/img/logo.svg
 
 collections:
   # - name: "blog"
