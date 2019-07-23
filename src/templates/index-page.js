@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
-import { Quote } from '../components';
+import { Quote, Metiers } from '../components';
 
 export const IndexPageTemplate = ({ title, image }) => (
   <>
@@ -25,6 +25,9 @@ export const IndexPageTemplate = ({ title, image }) => (
           <Quote />
         </div>
       </header>
+
+      <Metiers />
+      
     </div>
 
 
