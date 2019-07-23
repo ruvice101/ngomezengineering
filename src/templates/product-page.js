@@ -3,13 +3,14 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
 import Layout from '../components/Layout'
-import { Hero } from '../components';
+import { Hero, Metiers } from '../components';
 
 export const ProductPageTemplate = ({
   image,
   title,
   heading,
-  description
+  description,
+  metiers
 }) => (
   <>
     <div className="container">
@@ -19,18 +20,25 @@ export const ProductPageTemplate = ({
 
               <Hero image={image} title={title} />
 
-              <div className="columns">
+              {/* <div className="columns">
                 <div className="column is-7">
                   <h3 className="has-text-weight-semibold is-size-2">
                     {heading}
                   </h3>
                   <p>{description}</p>
                 </div>
-              </div>
+              </div> */}
               
             </div>
           </div>
         </div>
+
+        <Metiers
+          metiers={metiers}
+          listAll={true}
+          hideTitle={true}
+        />
+
     </div>
   </>
 )
@@ -57,6 +65,7 @@ const ProductPage = ({ data }) => {
         title={frontmatter.title}
         heading={frontmatter.heading}
         description={frontmatter.description}
+        {...frontmatter}
       />
     </Layout>
   )
@@ -69,7 +78,7 @@ ProductPage.propTypes = {
     }),
   }),
 }
-
+ 
 export default ProductPage
 
 export const productPageQuery = graphql`
@@ -86,7 +95,10 @@ export const productPageQuery = graphql`
         }
         heading
         description
-        
+        metiers {
+          title
+          image
+        }
       }
     }
   }
