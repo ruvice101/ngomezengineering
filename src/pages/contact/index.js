@@ -2,7 +2,7 @@ import React from 'react'
 import { navigate } from 'gatsby-link'
 import { Helmet } from 'react-helmet'
 import Layout from '../../components/Layout'
-import { Hero } from '../../components';
+// import { Hero } from '../../components';
 
 function encode(data) {
   return Object.keys(data)
@@ -47,7 +47,7 @@ export default class Index extends React.Component {
           <div className="container">
             <div className="content">
               
-              <Hero title="Contact" />
+              {/* <Hero title="Contact" /> */}
 
               <form
                 name="contact"
@@ -111,7 +111,7 @@ export default class Index extends React.Component {
                 </div>
                 <div className="field">
                   <button className="button is-link" type="submit">
-                    Send
+                    Envoyer
                   </button>
                 </div>
               </form>
