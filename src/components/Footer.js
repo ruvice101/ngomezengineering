@@ -70,17 +70,17 @@ const Footer = class extends React.Component {
                       </Link>
                     </li>
                     <li>
-                      <a className="navbar-item" to="geo:123">
+                      <a className="navbar-item" href="https://goo.gl/maps/xcaDnaUtHnMvmVPa7" target="__blank">
                         Rue Joseph Balla ESSONO, ETOA MEKI 
                       </a>
                     </li>
                     <li>
-                      <a className="navbar-item" to="tel:+237670142970">
+                      <a className="navbar-item" href="tel:+237670142970">
                         (+237) 670 142 970 - 697 862 315
                       </a>
                     </li>
                     <li>
-                      <a className="navbar-item" to="mailto:contact@ngomezengineering.com">
+                      <a className="navbar-item" href="mailto:contact@ngomezengineering.com">
                         contact@ngomezengineering.com
                       </a>
                     </li>

@@ -67,7 +67,7 @@ export default class Index extends React.Component {
                 </div>
                 <div className="field">
                   <label className="label" htmlFor={'name'}>
-                    Your name
+                    Votre Nom
                   </label>
                   <div className="control">
                     <input
@@ -82,7 +82,7 @@ export default class Index extends React.Component {
                 </div>
                 <div className="field">
                   <label className="label" htmlFor={'email'}>
-                    Email
+                    Adresse Électronique
                   </label>
                   <div className="control">
                     <input
@@ -116,6 +116,15 @@ export default class Index extends React.Component {
                 </div>
               </form>
             </div>
+
+            <div className="columns">
+              <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3347.3456634704316!2d11.522916579103997!3d3.8770738844034733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x108bcf7d5ad59fc3%3A0xda42fdef787e5587!2sRue+Joseph+Essono+Balla%2C+Yaounde!5e0!3m2!1sen!2scm!4v1563923750266!5m2!1sen!2scm"
+              className="column is-12" height="450" frameborder="0"
+              allowfullscreen></iframe>
+            </div>
+
+
           </div>
         </section>
       </Layout>
