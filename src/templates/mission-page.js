@@ -4,25 +4,23 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import { Helmet } from 'react-helmet'
+import { Hero } from '../components';
 
-export const MissionPageTemplate = ({ title, content, contentComponent }) => {
+export const MissionPageTemplate = ({ title, content, image, contentComponent }) => {
   const PageContent = contentComponent || Content
 
   return (
-    <section className="section section--gradient">
+    <>
       <div className="container">
         <div className="columns">
           <div className="column is-10 is-offset-1">
-            <div className="section">
-              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-                {title}
-              </h2>
+              <Hero title={title} image={image} />
+
               <PageContent className="content" content={content} />
-            </div>
           </div>
         </div>
       </div>
-    </section>
+    </>
   )
 }
 
@@ -46,6 +44,7 @@ const MissionPage = ({ data }) => {
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
         content={post.html}
+        image={post.frontmatter.image}
       />
     </Layout>
   )
@@ -63,6 +62,13 @@ export const MissionPageQuery = graphql`
       html
       frontmatter {
         title
+        image {
+          childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }

@@ -4,25 +4,30 @@ import { graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+import { Hero } from '../components';
 
-export const TrainingPageTemplate = ({ title, content, contentComponent }) => {
+export const TrainingPageTemplate = ({ title, content, image, contentComponent }) => {
   const PageContent = contentComponent || Content
 
   return (
-    <section className="section section--gradient">
+    <>
       <div className="container">
         <div className="columns">
           <div className="column is-10 is-offset-1">
+
+            <Hero image={image} title={title} />
+
             <div className="section">
               <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
                 {title}
               </h2>
               <PageContent className="content" content={content} />
             </div>
+
           </div>
         </div>
       </div>
-    </section>
+    </>
   )
 }
 
@@ -46,6 +51,7 @@ const TrainingPage = ({ data }) => {
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
         content={post.html}
+        image={post.frontmatter.image}
       />
     </Layout>
   )
@@ -63,6 +69,13 @@ export const TrainingPageQuery = graphql`
       html
       frontmatter {
         title
+        image {
+          childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }
