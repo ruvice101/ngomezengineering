@@ -29,27 +29,21 @@ const Footer = class extends React.Component {
                       </Link>
                     </li>
                     <li>
-                      <Link className="navbar-item" to="/about">
+                      <Link className="navbar-item" to="/mission">
                         Mission
                       </Link>
                     </li>
                     <li>
-                      <Link className="navbar-item" to="/products">
+                      <Link className="navbar-item" to="/metiers">
                         Métiers
                       </Link>
                     </li>
                     <li>
-                      {/* <Link className="navbar-item" to="/products">
-                        Products
-                      </Link> */}
-                      <Link className="navbar-item" to="/training">
+                      <Link className="navbar-item" to="/formations">
                         Formations
                       </Link>
                     </li>
                     <li>
-                      {/* <Link className="navbar-item" to="/contact/examples">
-                        Form Examples
-                      </Link> */}
                       <Link className="navbar-item" to="/contact">
                         Nous Contacter
                       </Link>
@@ -71,24 +65,24 @@ const Footer = class extends React.Component {
                 <section>
                   <ul className="menu-list">
                     <li>
-                      <Link className="navbar-item" to="/products">
-                        Métiers
+                      <Link className="navbar-item" to="/contact">
+                        Contact
                       </Link>
                     </li>
                     <li>
-                      <Link className="navbar-item" to="/products/geomatique">
-                        Ingénierie Geomatique
-                      </Link>
+                      <a className="navbar-item" to="geo:123">
+                        Rue Joseph Balla ESSONO, ETOA MEKI 
+                      </a>
                     </li>
                     <li>
-                      <Link className="navbar-item" to="/produts/btp">
-                        Activités du BTP
-                      </Link>
+                      <a className="navbar-item" to="tel:+237670142970">
+                        (+237) 670 142 970 - 697 862 315
+                      </a>
                     </li>
                     <li>
-                      <Link className="navbar-item" to="/products/geomètre-expert">
-                        Geomètre - Expert
-                      </Link>
+                      <a className="navbar-item" to="mailto:contact@ngomezengineering.com">
+                        contact@ngomezengineering.com
+                      </a>
                     </li>
                   </ul>
                 </section>
