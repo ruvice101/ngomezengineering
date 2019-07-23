@@ -10,6 +10,7 @@ import './all.sass'
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
   const { title, image, heading } = frontmatter
+  // console.log({ metier, metier2 })
   return (
     <Layout>
       <div className="is-fullwidth">

@@ -2,25 +2,41 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
+import Banner from '../components/Banner'
 import Content, { HTMLContent } from '../components/Content'
 import { Helmet } from 'react-helmet'
 
-export const AboutPageTemplate = ({ title, content, contentComponent }) => {
+export const AboutPageTemplate = ({ 
+  title,
+  image,
+  content,
+  contentComponent
+}) => {
   const PageContent = contentComponent || Content
-
+ 
+  console.log({ image })
   return (
     <section className="section section--gradient">
       <div className="container">
+
         <div className="columns">
+          <div className="column">
+            <Banner image={image} title={title} />
+          </div>
+        </div>
+
+        <PageContent className="content" content={content} />
+
+        {/* <div className="columns">
           <div className="column is-10 is-offset-1">
             <div className="section">
               <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
                 {title}
               </h2>
-              <PageContent className="content" content={content} />
             </div>
           </div>
-        </div>
+        </div> */}
+
       </div>
     </section>
   )

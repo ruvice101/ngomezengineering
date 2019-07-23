@@ -5,7 +5,7 @@ const Banner = ({ image, title }) => (
         className="full-width-image-container margin-top-0"
         style={{
             backgroundImage: `url(${
-            !!image.childImageSharp
+            (image && !!image.childImageSharp)
                 ? image.childImageSharp.fluid.src
                 : image
             })`,
