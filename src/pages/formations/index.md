@@ -1,6 +1,6 @@
 ---
 templateKey: 'training-page'
-path: /training
+path: /formations
 title: Nos Formations
 ---
 ### Topographie

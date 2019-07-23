@@ -1,6 +1,6 @@
 ---
 templateKey: 'product-page'
-path: /products
+path: /metiers
 title: Métiers
 image: /img/jumbotron.jpg
 heading: Métiers Gomez - Engineering
