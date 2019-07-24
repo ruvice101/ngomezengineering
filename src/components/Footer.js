@@ -114,6 +114,15 @@ const Footer = class extends React.Component {
             </div>
           </div>
         </div>
+        <div>
+          <p className="has-text-centered" style={{fontSize: 14}}>
+            Copyright © 2019 Ngomez Engineering | Développé par <a
+            style={{
+                color: "#339999", fontSize: 14
+            }}
+            href="https://www.bogital.com" target="__blank">Bogital Cameroun</a>
+          </p>
+        </div>
       </footer>
     )
   }
