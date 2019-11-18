@@ -15,7 +15,7 @@ const TemplateWrapper = ({ children }) => {
         <title>{title}</title>
         <meta name="description" content={description} />
 
-        <link
+        <link 
           rel="apple-touch-icon"
           sizes="180x180"
           href="/img/apple-touch-icon.png"
@@ -43,7 +43,7 @@ const TemplateWrapper = ({ children }) => {
         <meta property="og:type" content="business.business" />
         <meta property="og:title" content={title} />
         <meta property="og:url" content="/" />
-        <meta property="og:image" content="/img/og-image.jpg" />
+        <meta property="og:image" content="/img/bg.jpg" />
       </Helmet>
 
       <Navigation />
