@@ -1,7 +1,11 @@
-import Navigation from "./Navigation";
+import Hero from "./Hero";
 import Quote from "./Quote";
+import Metiers from "./Metiers";
+import Partenaires from "./Partenaires";
 
 export {
-  Navigation,
-  Quote
+  Hero,
+  Quote,
+  Metiers,
+  Partenaires
 }

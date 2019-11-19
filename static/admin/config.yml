@@ -16,6 +16,7 @@ slug:
   encoding: "ascii"
   clean_accents: true
   sanitize_replacement: "-"
+logo_url: https://www.bogital.com/img/logo.svg
 
 collections:
   - name: "pages"

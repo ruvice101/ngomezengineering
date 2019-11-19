@@ -1,10 +1,9 @@
 ---
-templateKey: 'formations-page'
+templateKey: 'training-page'
 path: /formations
-title: Nos Formations, Gomez Engineering
-image: /img/jumbotron.jpg
-heading: Formations
---- 
+title: Nos Formations
+image: /img/bg.jpg
+---
 ### Topographie
 Appareils de topographie: GNSS, TPS, LS...
 
@@ -15,4 +14,4 @@ Appareils de cartographie: Drones, Mobile GIS...
 Autopiste, Civil 3D, Covadis, Mensura, GéoMacao...
 
 ### Métiers
-Métiers du Géomètre-Expert 
+Métiers du Géomètre-Expert

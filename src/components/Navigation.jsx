@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import { Link } from "gatsby";
-import logo from '../img/logo.jpeg'
-import './navigation.sass'
+import { Link } from 'gatsby';
+
+import logo from '../img/logo.png';
+
+import './navigation.sass';
 
 
 class Navigation extends Component {
@@ -114,10 +116,6 @@ const ROUTES = [
   {
     name: "Formations",
     path: '/formations'
-  },
-  {
-    name: "Actualité",
-    path: '/news'
   },
   {
     name: "Nous contacter",

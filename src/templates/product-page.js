@@ -3,43 +3,45 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
 import Layout from '../components/Layout'
-import Banner from '../components/Banner';
+import { Hero, Metiers } from '../components';
 
 export const ProductPageTemplate = ({
   image,
   title,
   heading,
-  description
+  description,
+  metiers
 }) => (
-    <section className="section section--gradient">
-      <div className="container">
-
-        <div className="columns">
-          <div className="column">
-            <Banner image={image} title={title} />
-          </div>
-        </div>
-
+  <>
+    <div className="container">
         <div className="columns">
           <div className="column is-10 is-offset-1">
             <div className="content">
 
-              <div className="columns">
+              <Hero image={image} title={title} />
+
+              {/* <div className="columns">
                 <div className="column is-7">
                   <h3 className="has-text-weight-semibold is-size-2">
                     {heading}
                   </h3>
                   <p>{description}</p>
                 </div>
-              </div>
-
+              </div> */}
+              
             </div>
           </div>
         </div>
-      </div>
 
-    </section>
-  )
+        <Metiers
+          metiers={metiers}
+          listAll={true}
+          hideTitle={true}
+        />
+
+    </div>
+  </>
+)
 
 ProductPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
@@ -63,6 +65,7 @@ const ProductPage = ({ data }) => {
         title={frontmatter.title}
         heading={frontmatter.heading}
         description={frontmatter.description}
+        {...frontmatter}
       />
     </Layout>
   )
@@ -75,7 +78,7 @@ ProductPage.propTypes = {
     }),
   }),
 }
-
+ 
 export default ProductPage
 
 export const productPageQuery = graphql`
@@ -92,6 +95,18 @@ export const productPageQuery = graphql`
         }
         heading
         description
+        
+        metiers {
+          title
+          image {
+            childImageSharp {
+              fixed {
+                src
+              }
+            }
+          }
+        }
+
       }
     }
   }
