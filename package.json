@@ -32,7 +32,7 @@
     "uuid": "^3.2.1"
   },
   "resolutions": {
-    "**/react-router-dom": "4.3.1"
+    "**/react-router-dom": "5.0.0"
   },
   "keywords": [
     "gatsby"
