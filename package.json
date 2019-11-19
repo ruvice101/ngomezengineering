@@ -31,6 +31,9 @@
     "react-helmet": "^5.2.0",
     "uuid": "^3.2.1"
   },
+  "resolutions": {
+    "react-router": "4.3.1"
+  },
   "keywords": [
     "gatsby"
   ],
