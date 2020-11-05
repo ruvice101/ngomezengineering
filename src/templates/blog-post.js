@@ -70,10 +70,11 @@ const BlogPost = ({ data }) => {
               name="description"
               content={`${post.frontmatter.description}`}
             />
-            <meta
+            {/* TODO: Add keywords to all blog-post */}
+            {/* <meta
               name="keywords"
               content={`${post.frontmatter.keywords.join(', ')}`}
-            />
+            /> */}
           </Helmet>
         }
         tags={post.frontmatter.tags}
