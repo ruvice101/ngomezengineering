@@ -4,8 +4,10 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import { Hero } from '../components';
+import { Helmet } from 'react-helmet'
 
-export const TrainingPageTemplate = ({ title, content, image, contentComponent }) => {
+
+export const FormationPageTemplate = ({ title, content, image, contentComponent }) => {
   const PageContent = contentComponent || Content
 
   return (

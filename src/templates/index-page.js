@@ -38,7 +38,7 @@ export const IndexPageTemplate = ({ title, image, partners, metiers }) => (
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
-  const { title, image, heading } = frontmatter
+  // const { title, image, heading } = frontmatter
   // console.log({ metier, metier2 })
   return (
     <Layout>

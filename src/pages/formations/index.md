@@ -1,5 +1,5 @@
 ---
-templateKey: 'training-page'
+templateKey: 'formations-page'
 path: /formations
 title: Nos Formations
 image: /img/bg.jpg

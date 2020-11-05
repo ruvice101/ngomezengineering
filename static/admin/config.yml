@@ -1,19 +1,16 @@
 backend:
   name: git-gateway
-<<<<<<< HEAD
   branch: dev
   # name: github
   # repo: ruvice101/ngomezengineering
   #name: test-repo
-=======
-  branch: master
+  # branch: master
   commit_messages:
     create: 'Create {{collection}} “{{slug}}”'
     update: 'Update {{collection}} “{{slug}}”'
     delete: 'Delete {{collection}} “{{slug}}”'
     uploadMedia: '[skip ci] Upload “{{path}}”'
     deleteMedia: '[skip ci] Delete “{{path}}”'
->>>>>>> master
 
 media_folder: static/img
 public_folder: /img
@@ -29,8 +26,6 @@ slug:
 logo_url: https://www.bogital.com/img/logo.svg
 
 collections:
-<<<<<<< HEAD
-=======
   - name: "blog"
     label: "Blog"
     folder: "src/pages/blog"
@@ -46,7 +41,6 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
 
->>>>>>> master
   - name: "pages"
     label: "Pages"
     files:

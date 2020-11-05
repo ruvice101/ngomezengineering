@@ -123,7 +123,7 @@ const Footer = class extends React.Component {
           </div>
           <div>
             <p className="has-text-centered" style={{ fontSize: 14 }}>
-              Copyright © 2019 Ngomez Engineering | Développé par <a
+              Copyright © 2020 Ngomez Engineering | Développé par <a
                 style={{
                   color: "#339999", fontSize: 14
                 }}
